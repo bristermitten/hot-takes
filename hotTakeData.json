@@ -5,7 +5,8 @@
       "image": "./img/Linus-Torvalds.webp"
     },
     {
-      "take":"Simon Peyton-Jones"
+      "take": "Simon Peyton-Jones",
+      "image": "./img/peytonjones.jpg"
     },
     "James Gosling",
     "Anders Hejlsberg",
@@ -28,9 +29,6 @@
     "Tim Cook",
     "Ajit Pai",
     "Jack Dorsey",
-    "Aiden",
-    "NotAiden",
-    "Arthur",
     "Susan Wojcicki",
     "Bill Gates",
     "Steve Jobs",
