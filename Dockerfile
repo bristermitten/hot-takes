@@ -11,7 +11,7 @@ RUN npm run build
 
 FROM node:17-alpine
 WORKDIR /usr/src/bot/
-COPY img ./
+COPY img ./img
 COPY hotTakeData.json ./
 COPY --from=build /usr/src/bot/node_modules ./node_modules/
 COPY --from=build /usr/src/bot/bin ./bin/
