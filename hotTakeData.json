@@ -709,7 +709,7 @@
     },
     {
       "take": "Cloudflare",
-      "image": "./img/.DS_Store"
+      "image": "./img/cloudflare.png"
     },
     {
       "take": "GitHub Pages",
@@ -727,66 +727,21 @@
       "take": "TCP/IP",
       "image": "./img/tcpip.webp"
     },
-    {
-      "take": "Big O Notation",
-      "image": "./img/Microsoft.png"
-    },
-    {
-      "take": "Binary Search",
-      "image": "./img/jira.jpeg"
-    },
-    {
-      "take": "Bubble Sort",
-      "image": "./img/.DS_Store"
-    },
-    {
-      "take": "Merge Sort",
-      "image": "./img/.DS_Store"
-    },
-    {
-      "take": "Quick Sort",
-      "image": "./img/.DS_Store"
-    },
-    {
-      "take": "Heap Sort",
-      "image": "./img/.DS_Store"
-    },
-    {
-      "take": "Selection Sort",
-      "image": "./img/electron.png"
-    },
-    {
-      "take": "Insertion Sort",
-      "image": "./img/electron.png"
-    },
-    {
-      "take": "Shell Sort",
-      "image": "./img/.DS_Store"
-    },
-    {
-      "take": "Binary Tree",
-      "image": "./img/jira.jpeg"
-    },
-    {
-      "take": "Hash Tables",
-      "image": "./img/bash.png"
-    },
-    {
-      "take": "Linked Lists",
-      "image": "./img/linode.png"
-    },
-    {
-      "take": "Dijkstra's Algorithm",
-      "image": "./img/cisgo.png"
-    },
-    {
-      "take": "FizzBuzz",
-      "image": "./img/git.png"
-    },
-    {
-      "take": "Generics",
-      "image": "./img/deno.png"
-    },
+    "Big O Notation",
+    "Binary Search",
+    "Bubble Sort",
+    "Merge Sort",
+    "Quick Sort",
+    "Heap Sort",
+    "Insertion Sort",
+    "Selection Sort",
+    "Shell Sort",
+    "Binary Tree",
+    "Hash Tables",
+    "Linked Lists",
+    "Dijkstra's Algorithm",
+    "FizzBuzz",
+    "Generics",
     {
       "take": "HTTPS",
       "image": "./img/https.png"
