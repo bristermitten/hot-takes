@@ -148,7 +148,7 @@
   "companies": [
     {
       "take": "JetBrains",
-      "image": "./img/jetbrains.png"
+      "image": "./img/jetbrains.webp"
     },
     {
       "take": "Apache",
@@ -164,7 +164,7 @@
     },
     {
       "take": "Apple",
-      "image": "./img/apple.svg"
+      "image": "./img/apple.png"
     },
     {
       "take": "Oracle",
@@ -350,7 +350,7 @@
     },
     {
       "take": "Clojure",
-      "image": "./img/clojure.svg"
+      "image": "./img/clojure.png"
     },
     {
       "take": "Java",
@@ -366,7 +366,7 @@
     },
     {
       "take": "Kotlin",
-      "image": "./img/kotlin.svg"
+      "image": "./img/kotlin.png"
     },
     {
       "take": "Swift",
@@ -402,7 +402,7 @@
     },
     {
       "take": "VLang",
-      "image": "./img/v.svg"
+      "image": "./img/v.png"
     },
     {
       "take": "Ruby",
@@ -458,7 +458,7 @@
     },
     {
       "take": "Fortran",
-      "image": "./img/fortran.svg"
+      "image": "./img/fortran.png"
     },
     {
       "take": "ALGOL 55",
@@ -669,7 +669,7 @@
     },
     {
       "take": "DevOps",
-      "image": "./img/m2.jpg"
+      "image": "./img/devops.png"
     },
     {
       "take": "Git",
@@ -721,7 +721,7 @@
     },
     {
       "take": "Rustup",
-      "image": "./img/v.svg"
+      "image": "./img/rust.png"
     },
     {
       "take": "TCP/IP",
