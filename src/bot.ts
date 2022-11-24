@@ -1,10 +1,14 @@
 import generateHotTake from "./hotTakes.js";
 import config from './config.js'
-import {Client} from "twitter-api-sdk";
 import {getMediaId} from "./mediaUploads.js";
+import {TwitterApi} from "twitter-api-v2";
 
-
-const client = new Client(config.bearerToken);
+export const twitterAPI = new TwitterApi({
+	appKey: config.consumerKey,
+	appSecret: config.consumerSecret,
+	accessToken: config.token,
+	accessSecret: config.secret
+})
 
 
 const postHotTake = async () => {
@@ -13,8 +17,9 @@ const postHotTake = async () => {
 	const mediaIDs = await Promise.all(images.map(getMediaId))
 	console.log(`Media IDs: ${mediaIDs}`)
 
+
 	const mediaObj = (mediaIDs.length > 0) ? {media_ids: mediaIDs} : undefined
-	await client.tweets.createTweet({media: mediaObj, text: take + ' ' + config.suffix})
+	await twitterAPI.readWrite.v2.tweet({media: mediaObj, text: take + ' ' + config.suffix})
 	console.log(`Tweeted "${take}" with ${mediaIDs.length} images`)
 }
 
