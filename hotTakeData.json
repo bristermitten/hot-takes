@@ -1025,7 +1025,10 @@
     "I just purchased the domain name {oneWordAnything}.{tld}. I'm going to make a fortune.",
     "AITA for banning my GF from using {thing}?",
     "If {thing} was rewritten in {language} all its problems would go away.",
-    "If Jesus was alive today, he would use {thing}.",
+    {
+      "take": "If Jesus was alive today, he would use {thing}.",
+      "image": "./img/jesus.jpeg"
+    },
     "{language} is almost close to the bare metal now thanks to the stunningly optimized JIT.",
     "Most programmers are not like {person}. I'm one of the few that is.",
     "I had an interviewer laugh in my face when I said I use {thing}.",
