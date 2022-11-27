@@ -69,7 +69,7 @@
       "image": "./img/mark zuckerberg.jpg"
     },
     {
-      "take": "Elon Musk",
+        "take": "Elon Musk",
       "image": "./img/elon musk.webp"
     },
     {
@@ -693,7 +693,7 @@
     },
     {
       "take": "LeetCode",
-      "image": "./img/fleet.png"
+      "image": "./img/leetcode.png"
     },
     {
       "take": "Jira",
