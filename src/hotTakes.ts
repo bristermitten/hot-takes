@@ -46,7 +46,6 @@ const placeholders = {
 	company: () => hotTakeData.companies,
 	group: combineSources('people', 'companies'),
 	problem: () => hotTakeData.problems,
-	entity: combineSources('languages', 'technologies', 'people', 'companies'),
 	year: () => [randomInt(1500, 2022).toString()] as HotTakeThing[],
 	age: () => [randomInt(1, 50).toString()] as HotTakeThing[],
 	bigNumber: () => [randomInt(2, 100000).toString()] as HotTakeThing[],
