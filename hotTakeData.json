@@ -69,7 +69,7 @@
       "image": "./img/mark zuckerberg.jpg"
     },
     {
-        "take": "@elonmusk",
+      "take": "@elonmusk",
       "image": "./img/elon musk.webp"
     },
     {
@@ -613,7 +613,7 @@
     },
     {
       "take": "#NodeJS",
-      "image": "./img/adobe.png"
+      "image": "./img/nodejs.png"
     },
     {
       "take": "#Deno",
@@ -625,7 +625,7 @@
     },
     {
       "take": "ASP.NET",
-      "image": "./img/apl.png"
+      "image": "./img/dotnet.png"
     },
     {
       "take": "#Electron",
@@ -907,7 +907,10 @@
     "{language} is heavily influenced by {thing|group}.",
     "We should really stop listening to {group}. They told us to use {thing}, after all.",
     "{thing} is a {problem} disaster waiting to happen.",
-    "My latest project is a lightweight Electron wrapper for {technology}.",
+    {
+      "take": "My latest project is a lightweight Electron wrapper for {technology}.",
+      "image": "./img/electron.png"
+    },
     "{technology} doesn't need {technology}, it's perfect already.",
     "Could {technology} be the solution to the {problem|technology|person|company} problem?",
     "imo, {group} needs to start looking at {technology}.",
