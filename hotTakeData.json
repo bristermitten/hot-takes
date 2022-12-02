@@ -996,6 +996,10 @@
     },
     "One of my greatest achievements is becoming a moderator of r/{oneWordAnything}.",
     "If {thing} had {thing} it could increase productivity by {percentage}%",
-    "{group} does not know what a monad is."
+    "{group} does not know what a monad is.",
+    {
+      "take": "{person} has launched an OnlyFans!",
+      "image": "./img/onlyfans.png"
+    }
   ]
 }
