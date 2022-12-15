@@ -1000,6 +1000,15 @@
     {
       "take": "{person} has launched an OnlyFans!",
       "image": "./img/onlyfans.png"
-    }
+    },
+    "Who would win in a fight? {group} or {group}?",
+    "{anything} is underrated, change my mind.",
+    "{anything} is overrated, change my mind.",
+    {
+      "take": "The world if {anything} was mainstream",
+      "image": "./img/utopia.jpg"
+    },
+    "{anything} and {anything} should partner up!",
+    "{anything} should make a replacement for {thing}!"
   ]
 }
