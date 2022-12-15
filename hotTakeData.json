@@ -293,6 +293,10 @@
     {
       "take": "@PayPal",
       "image": "./img/paypal.png"
+    },
+    {
+      "take": "@OpenAI",
+      "image": "./img/openai.png"
     }
   ],
   "languages": [
@@ -858,7 +862,13 @@
     "indentation",
     "tail recursion",
     "tail call optimization",
-    "webscale"
+    "webscale",
+    "ChatGPT",
+    "GPT-3",
+    {
+      "take": "TensorFlow",
+      "image": "./img/tensorflow.png"
+    }
   ],
   "problems": [
     "backward compatibility",
