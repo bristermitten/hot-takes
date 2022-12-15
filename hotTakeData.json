@@ -1009,6 +1009,8 @@
       "image": "./img/utopia.jpg"
     },
     "{anything} and {anything} should partner up!",
-    "{anything} should make a replacement for {thing}!"
+    "{anything} should make a replacement for {thing}!",
+    "I just bought ${bigNumber} worth of {company} stocks and it's gone up {percentage}% already! I'm a genius!",
+    "I just bought ${bigNumber} worth of {company} stocks and it's gone down {percentage}% already! How could this happen?"
   ]
 }
