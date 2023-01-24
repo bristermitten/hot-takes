@@ -793,6 +793,7 @@
     },
     "OOP",
     "Functional Programming",
+    "Higher Kinded Types",
     "Test Driven Development",
     "iteration",
     "recursion",
