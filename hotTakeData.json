@@ -715,6 +715,7 @@
       "take": "#Cloudflare",
       "image": "./img/cloudflare.png"
     },
+    "Cloudflare Workers",
     {
       "take": "GitHub Pages",
       "image": "./img/github pages.png"
@@ -868,7 +869,8 @@
     {
       "take": "TensorFlow",
       "image": "./img/tensorflow.png"
-    }
+    },
+    "Markov Chains"
   ],
   "problems": [
     "backward compatibility",
@@ -928,7 +930,10 @@
     "{person} should be made the CTO of {company}!",
     "I just started a new job at {company}. My boss, {person} just told me to refactor {bigNumber} lines of {language}. Kill me.",
     "Coding in {language} is like walking over hot coals.",
-    "Well written {language} is what heaven looks like.",
+    {
+      "take": "Well written {language} is what heaven looks like.",
+      "image": "./img/heaven.webp"
+    },
     "As someone comfortable with {language}, learning {thing} took me over {age} years.",
     "{language} is not a programming language, change my mind.",
     "{thing} is so easy. In fact, I've started teaching it to my {age} year old.",
@@ -1021,6 +1026,13 @@
     "{anything} and {anything} should partner up!",
     "{anything} should make a replacement for {thing}!",
     "I just bought ${bigNumber} worth of {company} stocks and it's gone up {percentage}% already! I'm a genius!",
-    "I just bought ${bigNumber} worth of {company} stocks and it's gone down {percentage}% already! How could this happen?"
+    "I just bought ${bigNumber} worth of {company} stocks and it's gone down {percentage}% already! How could this happen?",
+    {
+      "take":"Average {thing} user vs average {thing} enjoyer",
+      "image": [
+        "./img/virgin.png",
+        "./img/chad.png"
+      ]
+    }
   ]
 }
