@@ -5,6 +5,10 @@
       "image": "./img/linus torvalds.webp"
     },
     {
+      "take": "Terry Davis",
+      "image": "./img/terry davis.jpg"
+    },
+    {
       "take": "Simon Peyton-Jones",
       "image": "./img/simon peyton-jones.jpg"
     },
@@ -790,6 +794,10 @@
     {
       "take": "#MacOS",
       "image": "./img/macos.png"
+    },
+    {
+      "take": "TempleOS",
+      "image": "./img/templeos.jpg"
     },
     "OOP",
     "Functional Programming",
