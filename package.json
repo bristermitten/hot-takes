@@ -10,7 +10,7 @@
 		"hot-takes": "src/bot.ts"
 	},
 	"scripts": {
-		"test": "echo \"Error: no test specified\" && exit 1",
+		"test": "bun test",
 		"start": "bun run src/bot.ts",
 		"dev": "bun --watch src/bot.ts",
 		"lint": "biome check --fix"

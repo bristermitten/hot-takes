@@ -2,6 +2,7 @@ import { randomInt } from "node:crypto";
 import { readFileSync } from "node:fs";
 import "./util";
 import { expectArrayOfMaxLen4 } from "./util";
+import { basename } from "node:path";
 
 type HotTakeThing =
 	| string
@@ -28,8 +29,8 @@ function hotTakeValue(thing: HotTakeThing): string {
 
 function hotTakeImages(thing: HotTakeThing): string[] {
 	if (typeof thing === "string") return [];
-	if (typeof thing.image === "string") return [thing.image];
-	return thing.image;
+	const images = [thing.image].flat();
+	return images.map((p) => basename(p));
 }
 
 const hotTakeData: {
@@ -94,7 +95,7 @@ function mapPlaceholder(
 
 type HotTakeResponse = {
 	take: string;
-	images:
+	images?:
 		| [string]
 		| [string, string]
 		| [string, string, string]
@@ -123,6 +124,6 @@ export default async function generateHotTake(): Promise<HotTakeResponse> {
 	if (takeImage) images.push(...takeImage); // add the take image to the end
 	return {
 		take,
-		images: expectArrayOfMaxLen4(images.slice(0, 4)),
+		images: expectArrayOfMaxLen4(images),
 	};
 }
