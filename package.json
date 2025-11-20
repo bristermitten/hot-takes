@@ -15,7 +15,6 @@
   "devDependencies": {
     "@types/express": "^5.0.5",
     "@types/levenshtein": "^1.0.4",
-    "@types/mmmagic": "^0.4.33",
     "@types/node": "^24.10.1",
     "@types/string-similarity": "^4.0.2",
     "typescript": "^5.9.3"
@@ -25,7 +24,7 @@
     "expiry-map": "^2.0.0",
     "express": "^5.1.0",
     "levenshtein": "^1.0.5",
-    "mmmagic": "^0.5.3",
+    "file-type": "^19.0.0",
     "string-similarity": "^4.0.4",
     "ts-node": "^10.9.2",
     "twitter-api-sdk": "^1.2.1",
