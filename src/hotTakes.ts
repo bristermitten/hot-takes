@@ -1,6 +1,7 @@
 import {randomInt} from 'crypto'
 import {readFileSync} from 'fs'
 import './util.js'
+import { expectArrayOfMaxLen4 } from './util.js'
 
 type HotTakeThing = string | {
     take: string,
@@ -77,7 +78,7 @@ function mapPlaceholder(key: Placeholder, f: (s: HotTakeThing) => HotTakeThing):
 
 type HotTakeResponse = {
     take: string,
-    images: string[] // max of 4
+    images: [string] | [string, string] | [string, string, string] | [string, string, string, string]
 }
 
 export default async function generateHotTake(): Promise<HotTakeResponse> {
@@ -103,6 +104,6 @@ export default async function generateHotTake(): Promise<HotTakeResponse> {
     if (takeImage) images.push(...takeImage) // add the take image to the end
     return {
         take,
-        images: images.slice(0, 4)
+        images: expectArrayOfMaxLen4(images.slice(0, 4))
     }
 }
