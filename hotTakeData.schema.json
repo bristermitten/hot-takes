@@ -1,107 +1,107 @@
 {
-  "$schema": "https://json-schema.org/draft/2020-12/schema",
-  "title": "Hot Take Data",
-  "description": "A collection of data for generating programming hot takes.",
-  "type": "object",
-  "properties": {
-    "people": {
-      "description": "A list of influential people in the tech industry.",
-      "type": "array",
-      "items": { "$ref": "#/$defs/takeItem" }
-    },
-    "companies": {
-      "description": "A list of tech companies.",
-      "type": "array",
-      "items": { "$ref": "#/$defs/takeItem" }
-    },
-    "languages": {
-      "description": "A list of programming languages.",
-      "type": "array",
-      "items": { "$ref": "#/$defs/takeItem" }
-    },
-    "technologies": {
-      "description": "A list of various technologies, frameworks, and concepts.",
-      "type": "array",
-      "items": { "$ref": "#/$defs/takeItem" }
-    },
-    "problems": {
-      "description": "A list of common problems and concepts in software development.",
-      "type": "array",
-      "items": { "type": "string" }
-    },
-    "tlds": {
-      "description": "A list of top-level domains.",
-      "type": "array",
-      "items": { "type": "string" }
-    },
-    "takes": {
-      "description": "A list of hot take templates.",
-      "type": "array",
-      "items": { "$ref": "#/$defs/takeDefinition" }
-    }
-  },
-  "required": [
-    "people",
-    "companies",
-    "languages",
-    "technologies",
-    "problems",
-    "tlds",
-    "takes"
-  ],
-  "$defs": {
-    "takeObject": {
-      "type": "object",
-      "description": "A take object representing an item with text and an associated image.",
-      "properties": {
-        "take": {
-          "description": "The text.",
-          "type": "string"
-        },
-        "image": {
-          "description": "The path to the image for the item.",
-          "type": "string",
-          "format": "uri-relative"
-        }
-      },
-      "required": ["take", "image"]
-    },
-    "takeItem": {
-      "description": "Either a standalone take or a take object",
-      "oneOf": [{ "type": "string" }, { "$ref": "#/$defs/takeObject" }]
-    },
-    "takeDefinitionObject": {
-      "type": "object",
-      "properties": {
-        "take": {
-          "description": "The hot take template string.",
-          "type": "string"
-        },
-        "image": {
-          "description": "The path to an image (or images) associated with the take.",
-          "oneOf": [
-            {
-              "type": "string",
-              "format": "uri-relative"
-            },
-            {
-              "type": "array",
-              "items": {
-                "type": "string",
-                "format": "uri-relative"
-              }
-            }
-          ]
-        }
-      },
-      "required": ["take"]
-    },
-    "takeDefinition": {
-      "description": "Either a simple take template string or a template object with an image.",
-      "oneOf": [
-        { "type": "string" },
-        { "$ref": "#/$defs/takeDefinitionObject" }
-      ]
-    }
-  }
+	"$schema": "https://json-schema.org/draft/2020-12/schema",
+	"title": "Hot Take Data",
+	"description": "A collection of data for generating programming hot takes.",
+	"type": "object",
+	"properties": {
+		"people": {
+			"description": "A list of influential people in the tech industry.",
+			"type": "array",
+			"items": { "$ref": "#/$defs/takeItem" }
+		},
+		"companies": {
+			"description": "A list of tech companies.",
+			"type": "array",
+			"items": { "$ref": "#/$defs/takeItem" }
+		},
+		"languages": {
+			"description": "A list of programming languages.",
+			"type": "array",
+			"items": { "$ref": "#/$defs/takeItem" }
+		},
+		"technologies": {
+			"description": "A list of various technologies, frameworks, and concepts.",
+			"type": "array",
+			"items": { "$ref": "#/$defs/takeItem" }
+		},
+		"problems": {
+			"description": "A list of common problems and concepts in software development.",
+			"type": "array",
+			"items": { "type": "string" }
+		},
+		"tlds": {
+			"description": "A list of top-level domains.",
+			"type": "array",
+			"items": { "type": "string" }
+		},
+		"takes": {
+			"description": "A list of hot take templates.",
+			"type": "array",
+			"items": { "$ref": "#/$defs/takeDefinition" }
+		}
+	},
+	"required": [
+		"people",
+		"companies",
+		"languages",
+		"technologies",
+		"problems",
+		"tlds",
+		"takes"
+	],
+	"$defs": {
+		"takeObject": {
+			"type": "object",
+			"description": "A take object representing an item with text and an associated image.",
+			"properties": {
+				"value": {
+					"description": "The text.",
+					"type": "string"
+				},
+				"image": {
+					"description": "The path to the image for the item.",
+					"type": "string",
+					"format": "uri-relative"
+				}
+			},
+			"required": ["value", "image"]
+		},
+		"takeItem": {
+			"description": "Either a standalone take or a take object",
+			"oneOf": [{ "type": "string" }, { "$ref": "#/$defs/takeObject" }]
+		},
+		"takeDefinitionObject": {
+			"type": "object",
+			"properties": {
+				"take": {
+					"description": "The hot take template string.",
+					"type": "string"
+				},
+				"image": {
+					"description": "The path to an image (or images) associated with the take.",
+					"oneOf": [
+						{
+							"type": "string",
+							"format": "uri-relative"
+						},
+						{
+							"type": "array",
+							"items": {
+								"type": "string",
+								"format": "uri-relative"
+							}
+						}
+					]
+				}
+			},
+			"required": ["take"]
+		},
+		"takeDefinition": {
+			"description": "Either a simple take template string or a template object with an image.",
+			"oneOf": [
+				{ "type": "string" },
+				{ "$ref": "#/$defs/takeDefinitionObject" }
+			]
+		}
+	}
 }
