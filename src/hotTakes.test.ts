@@ -1,6 +1,5 @@
-import { describe, it, expect, mock } from "bun:test";
+import { describe, expect, it, mock } from "bun:test";
 import generateHotTake from "./hotTakes";
-import { readFileSync } from "node:fs";
 
 // Mock readFileSync
 mock.module("node:fs", () => ({

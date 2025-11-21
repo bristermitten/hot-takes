@@ -1,8 +1,8 @@
 import { randomInt } from "node:crypto";
 import { readFileSync } from "node:fs";
 import "./util";
-import { expectArrayOfMaxLen4 } from "./util";
 import { basename } from "node:path";
+import { expectArrayOfMaxLen4 } from "./util";
 
 type HotTakeThing =
 	| string
