@@ -4,6 +4,9 @@ import "./util";
 import { basename } from "node:path";
 import { expectArrayOfMaxLen4 } from "./util";
 
+/**
+ * A HotTakeThing can be either a simple string or an object with a take and an image (or images).
+ */
 type HotTakeThing =
 	| string
 	| {
@@ -11,6 +14,12 @@ type HotTakeThing =
 			image: string | string[];
 	  };
 
+/**
+ * Apply a function to replace the take in a {@link HotTakeThing}.
+ * @param f the function to apply to the take
+ * @param thing the HotTakeThing to modify
+ * @returns the modified HotTakeThing
+ */
 function replaceHotTakeThing(
 	f: (arg: string) => string,
 	thing: HotTakeThing,
@@ -22,17 +31,30 @@ function replaceHotTakeThing(
 	};
 }
 
+/**
+ * Get the take value from a {@link HotTakeThing}.
+ * @param thing the HotTakeThing to extract the take from
+ * @returns the take value as a string
+ */
 function hotTakeValue(thing: HotTakeThing): string {
 	if (typeof thing === "string") return thing;
 	return thing.take;
 }
 
+/**
+ * Get the images from a {@link HotTakeThing}.
+ * @param thing the HotTakeThing to extract images from
+ * @returns an array of image filenames
+ */
 function hotTakeImages(thing: HotTakeThing): string[] {
 	if (typeof thing === "string") return [];
 	const images = [thing.image].flat();
 	return images.map((p) => basename(p));
 }
 
+/**
+ * The hot take data loaded from hotTakeData.json.
+ */
 const hotTakeData: {
 	people: HotTakeThing[];
 	companies: HotTakeThing[];

@@ -1,4 +1,5 @@
 {
+	"$schema": "./hotTakeData.schema.json",
 	"people": [
 		{
 			"take": "Linus Torvalds",
