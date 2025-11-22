@@ -4,7 +4,7 @@ import generateHotTake from "./hotTakes";
 // Mock readFileSync
 mock.module("node:fs", () => ({
 	readFileSync: (path: string) => {
-		if (path.endsWith("hotTakeData.json")) {
+		if (path.endsWith("hotTakeData.json5")) {
 			return JSON.stringify({
 				people: [],
 				companies: [],
@@ -42,7 +42,7 @@ describe("generateHotTake", () => {
 		}
 		if (hotTake.take.includes("Blockchain")) {
 			expect(hotTake.images).toContain("blockchain.png");
-		}
+		} 
 	});
 
 	it("should return a maximum of 4 images", async () => {

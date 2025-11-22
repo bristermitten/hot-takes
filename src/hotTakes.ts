@@ -4,6 +4,7 @@ import "./util";
 import { basename } from "node:path";
 import { z } from "zod";
 import { expectArrayOfMaxLen4 } from "./util";
+import JSON5 from 'json5'
 
 const takeItemValueSchema = z.string().meta({
 	id: "TakeItemValue",
@@ -197,7 +198,7 @@ function takeDefinitionImages(thing: TakeDefinition): string[] {
  * The hot take data loaded from hotTakeData.json.
  */
 const hotTakeData: HotTakeData = HotTakeDataSchema.parse(
-	JSON.parse(readFileSync(`${process.cwd()}/hotTakeData.json`).toString()),
+	JSON5.parse(readFileSync(`${process.cwd()}/hotTakeData.json5`).toString()),
 );
 
 type PlaceholderFunction = (users: string[]) => TakeItem[];
