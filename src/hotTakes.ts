@@ -156,7 +156,7 @@ function replaceTakeItemValue(
  * @param thing the {@link TakeItem} to extract the take from
  * @returns the take value as a string
  */
-function takeItemValue(thing: TakeItem): string {
+export function takeItemValue(thing: TakeItem): string {
 	if (typeof thing === "string") return thing;
 	return thing.value;
 }
@@ -166,7 +166,7 @@ function takeItemValue(thing: TakeItem): string {
  * @param thing the {@link TakeDefinition} to extract the take from
  * @returns the take value as a string
  */
-function takeDefinitionValue(thing: TakeDefinition): string {
+export function takeDefinitionValue(thing: TakeDefinition): string {
 	if (typeof thing === "string") return thing;
 	return thing.take;
 }
@@ -176,7 +176,7 @@ function takeDefinitionValue(thing: TakeDefinition): string {
  * @param thing the {@link TakeItem} to extract images from
  * @returns an array of image filenames
  */
-function takeItemImages(thing: TakeItem): string[] {
+export function takeItemImages(thing: TakeItem): string[] {
 	if (typeof thing === "string") return [];
 	const images = [thing.image].flat();
 	return images.map((p) => basename(p));
@@ -187,7 +187,7 @@ function takeItemImages(thing: TakeItem): string[] {
  * @param thing the {@link TakeDefinition} to extract images from
  * @returns an array of image filenames
  */
-function takeDefinitionImages(thing: TakeDefinition): string[] {
+export function takeDefinitionImages(thing: TakeDefinition): string[] {
 	if (typeof thing === "string") return [];
 	if (!thing.image) return [];
 	const images = [thing.image].flat();
@@ -200,6 +200,13 @@ function takeDefinitionImages(thing: TakeDefinition): string[] {
 let hotTakeData: HotTakeData = HotTakeDataSchema.parse(
 	JSON5.parse(readFileSync(`${process.cwd()}/hotTakeData.json5`).toString()),
 );
+
+/**
+ * @returns the hot take data
+ */
+export function getHotTakeData(): HotTakeData {
+	return hotTakeData;
+}
 
 /**
  * @internal Used for testing purposes only.
