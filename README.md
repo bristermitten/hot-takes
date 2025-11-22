@@ -47,5 +47,5 @@ Copy [.env.template](.env.template) to `.env` and fill in the values. These can 
 Portal.
 For documentation on what the values mean, see [src/config.ts](src/config.ts).
 
-Then, run `npm install` to install dependencies, and `npm build` to compile the bot. Finally, run `npm start` to run the
+Then, run `bun install` to install dependencies. Finally, run `bun start` to run the
 bot.

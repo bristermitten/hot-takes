@@ -1,20 +1,11 @@
-FROM node:17-alpine as build
-WORKDIR /usr/src/bot/
+FROM oven/bun:1
+WORKDIR /usr/src/app
 
-COPY package.json package-lock.json ./
-RUN apk add python3 make g++
-RUN npm install
+COPY package.json bun.lock ./
+RUN bun install --frozen-lockfile
 
-COPY tsconfig.json ./
-COPY src/ ./src/
-RUN npm run build
-
-FROM node:17-alpine
-WORKDIR /usr/src/bot/
+COPY . .
 COPY img ./img
-COPY hotTakeData.json ./
-COPY --from=build /usr/src/bot/node_modules ./node_modules/
-COPY --from=build /usr/src/bot/bin ./bin/
-COPY --from=build /usr/src/bot/package.json ./package.json
-ENV NODE_ENV production
-CMD ["node", "bin/bot.js"]
+
+ENV NODE_ENV=production
+CMD ["bun", "src/bot.ts"]
