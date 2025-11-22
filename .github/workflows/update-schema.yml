@@ -1,0 +1,19 @@
+name: Update JSON Schema
+
+on:
+  workflow_dispatch:
+
+jobs:
+  update-schema:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: oven-sh/setup-bun@v1
+        with:
+          bun-version: latest
+      - run: bun install
+      - run: bun run src/jsonSchema.ts
+      - uses: stefanzweifel/git-auto-commit-action@v5
+        with:
+          commit_message: "chore: update JSON schema"
+          file_pattern: "hotTakeData.schema.json"
