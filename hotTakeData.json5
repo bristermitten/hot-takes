@@ -48,7 +48,7 @@
 		},
 		"Brendan Eich",
 		"John Resig",
-		// Computer Science Pioneers & Theorists
+		// historical figures
 		{
 			value: "Alan Turing",
 			image: "./img/alan turing.jpg",
@@ -89,7 +89,7 @@
 			value: "Euclid of Alexandria",
 			image: "./img/euclid.webp",
 		},
-		// Authors, Evangelists & Personalities
+		// More "respectable" tech personalities
 		{
 			value: "Robert C. Martin",
 			image: "./img/robert c martin.jpg",
@@ -110,7 +110,7 @@
 			value: "Tom Scott",
 			image: "./img/tom scott.jpg",
 		},
-		// Tech CEOs & Business Leaders
+		// Tech CEOs
 		{
 			value: "Mark Zuckerberg",
 			image: "./img/mark zuckerberg.jpg",
@@ -156,6 +156,10 @@
 			value: "Ajit Pai",
 			image: "./img/ajit pai.jpg",
 		},
+
+		// AI people
+		"Sam Altman",
+		"Yann LeCun"
 	],
 	companies: [
 		// Big Tech
@@ -311,10 +315,7 @@
 			value: "Mojang",
 			image: "./img/mojang.png",
 		},
-		{
-			value: "OpenAI",
-			image: "./img/openai.png",
-		},
+
 		// Minecraft-related
 		{
 			value: "Spigot",
@@ -324,6 +325,14 @@
 			value: "Bukkit",
 			image: "./img/bukkit.png",
 		},
+		// AI companies
+				{
+			value: "OpenAI",
+			image: "./img/openai.png",
+		},
+		"Anthropic",
+		"Midjourney",
+		"Perplexity",
 	],
 	languages: [
 		// Systems Languages
@@ -948,24 +957,25 @@
 			image: "./img/minecraftforge.png",
 		},
 		// LLM/AI Zone
-		{
-			value: "GitHub Copilot",
-			image: "./img/github copilot.png",
-		},
-		{
-			value: "machine learning",
-			image: "./img/machine learning.png",
-		},
-		"ChatGPT",
-		"GPT-3",
 		"Artificial Intelligence",
 		"Large Language Models",
 		"Neural Networks",
+		"GPT-5.1",
+		"Veo",
+		"Sora",
+		"Gemini",
+		"Claude 3",
+		"Llama 3",
+		"Stable Diffusion XL",
+		"DALL-E 3",
+		"Grok",
+		"AlphaFold",
 		{
 			value: "TensorFlow",
 			image: "./img/tensorflow.png",
 		},
 		"Markov Chains",
+		"Prompt Engineering",
 		// Misc
 		{
 			value: "ZIP files",
@@ -976,6 +986,7 @@
 		"Big Data",
 		"Virtual Reality",
 		"Augmented Reality",
+		"Quantum Computing"
 	],
 	problems: [
 		"backward compatibility",
@@ -1016,6 +1027,9 @@
 		"merge conflicts",
 		"spaghetti code",
 		"halting problem",
+		"prompt injection",
+		"ai hallucinations",
+		"data corruption",
 	],
 	tlds: [
 		"com",
@@ -1184,5 +1198,38 @@
 		'As {person} once said, "{thing} is mid".',
 		"{language}'s syntax protects it from being pretty.",
 		"We are not making it out of {thing} with this one :speaking_head::speaking_head::fire::fire::100::100::speaking_head:",
+		"If {person} truly understood {thing}, they would never have created {thing}.",
+		"The only reason {technology} is popular is because {company} forced it on us.",
+		"Modern {technology} is just {technology} but worse.",
+		"The golden age of {thing} was {year}. It all went downhill after that.",
+		"I measure my productivity in how many times I avoid using {thing}.",
+		"The real hot take is that {thing} is actually good.",
+		"You only hate {thing} because you're bad at it.",
+		"I refuse to work with anyone who uses {thing}.",
+		"Writing {language} without {thing} is like driving without a seatbelt.",
+		"{language} is the only language that actually respects the programmer.",
+		"{company}'s developer tools are a joke compared to {company}'s.",
+		"My editor config for {language} is more complex than most {language} codebases.",
+		"I spend {percentage}% of my time fixing {technology} configurations.",
+		"{person}'s opinion on {thing} is the only one that matters.",
+		"{person} should be canceled for their stance on {thing}.",
+		"I have made a huge breakthrough in solving {problem}, and it involves using {thing} in a way no one has thought of before.",
+
+		// LLM slop takes
+		"I've built an agent with {technology} to solve {problem} automatically. My job is now obsolete.",
+		"My new {technology} agent just wrote a better version of {thing} in {language} in 5 minutes.",
+		"The art of programming is dead. It's all prompt engineering for {technology} now.",
+		"Just fired my entire team of {language} developers and replaced them with a single {technology} agent. We are 10x more productive.",
+		"If your startup isn't using {technology} agents to automate your business, you've already lost.",
+		"Unpopular opinion: {technology} is just a bunch of if-statements.",
+		"I just fine-tuned {technology} on the entire {company} codebase. It's now a better CEO than {person}.",
+		"{technology} just generated a full-length movie from a one-sentence prompt. Hollywood is finished.",
+		"The prompt to get {technology} to solve {problem} was more complex than the actual {language} code to solve it.",
+		"My {technology} agent now attends meetings for me. It's better at it than I was.",
+		"Stop trying to solve {problem} with {thing}. A {technology} agent can do it in seconds.",
+		"Hot take: {technology} is not 'AI'. It's just a glorified autocomplete.",
+		"Just watched {technology} have a full conversation with itself to solve {problem}. This is the future.",
+		"Anyone still writing {language} by hand is living in the past. My {technology} agent does it all for me.",
+		"I'm pretty sure {technology} will achieve AGI within the next year."
 	],
 }
