@@ -1,158 +1,153 @@
 {
-    "$schema": "https://json-schema.org/draft/2020-12/schema",
-    "title": "Hot Take Data",
-    "description": "The complete data structure containing all possible take items and templates for generating hot takes.",
-    "type": "object",
-    "properties": {
-        "people": {
-            "title": "People",
-            "description": "A list of influential people in the tech industry.",
-            "type": "array",
-            "items": {
-                "$ref": "#/$defs/TakeItem"
-            }
-        },
-        "companies": {
-            "title": "Companies",
-            "description": "A list of tech companies.",
-            "type": "array",
-            "items": {
-                "$ref": "#/$defs/TakeItem"
-            }
-        },
-        "languages": {
-            "title": "Programming Languages",
-            "description": "A list of programming languages.",
-            "type": "array",
-            "items": {
-                "$ref": "#/$defs/TakeItem"
-            }
-        },
-        "technologies": {
-            "title": "Technologies",
-            "description": "A list of technologies, frameworks, and technical concepts",
-            "type": "array",
-            "items": {
-                "$ref": "#/$defs/TakeItem"
-            }
-        },
-        "problems": {
-            "title": "Problems",
-            "description": "A list of common problems in software development.",
-            "type": "array",
-            "items": {
-                "type": "string"
-            }
-        },
-        "tlds": {
-            "title": "Top-Level Domains",
-            "description": "A list of top-level domains.",
-            "type": "array",
-            "items": {
-                "type": "string"
-            }
-        },
-        "takes": {
-            "title": "Takes",
-            "description": "A list of hot take templates.",
-            "type": "array",
-            "items": {
-                "title": "Take Definition",
-                "description": "A take definition which can be either a text template string or an object with a take and optional images.",
-                "anyOf": [
-                    {
-                        "$ref": "#/$defs/Take"
-                    },
-                    {
-                        "title": "Take Definition Object",
-                        "description": "An object that contains a take template string and an optional image or images.",
-                        "type": "object",
-                        "properties": {
-                            "take": {
-                                "$ref": "#/$defs/Take"
-                            },
-                            "image": {
-                                "title": "Image or Images",
-                                "description": "An optional image filename or an array of image filenames associated with this take.",
-                                "anyOf": [
-                                    {
-                                        "$ref": "#/$defs/ImageFilename"
-                                    },
-                                    {
-                                        "maxItems": 4,
-                                        "type": "array",
-                                        "items": {
-                                            "$ref": "#/$defs/ImageFilename"
-                                        }
-                                    }
-                                ]
-                            }
-                        },
-                        "required": [
-                            "take"
-                        ],
-                        "additionalProperties": false
-                    }
-                ]
-            }
-        }
-    },
-    "required": [
-        "people",
-        "companies",
-        "languages",
-        "technologies",
-        "problems",
-        "tlds",
-        "takes"
-    ],
-    "additionalProperties": false,
-    "$defs": {
-        "TakeItem": {
-            "id": "TakeItem",
-            "title": "Take Item",
-            "description": "A take item which can be either a text value or an object with a value and an image.",
-            "anyOf": [
-                {
-                    "$ref": "#/$defs/TakeItemValue"
-                },
-                {
-                    "title": "Take Item Object",
-                    "description": "An object that contains a text value and an image filename.",
-                    "type": "object",
-                    "properties": {
-                        "value": {
-                            "$ref": "#/$defs/TakeItemValue"
-                        },
-                        "image": {
-                            "$ref": "#/$defs/ImageFilename"
-                        }
-                    },
-                    "required": [
-                        "value",
-                        "image"
-                    ],
-                    "additionalProperties": false
-                }
-            ]
-        },
-        "TakeItemValue": {
-            "id": "TakeItemValue",
-            "title": "Value",
-            "description": "The text value of the take item, which will be used when replacing placeholders.",
-            "type": "string"
-        },
-        "ImageFilename": {
-            "id": "ImageFilename",
-            "title": "Image Filename",
-            "description": "The filename of the image associated with this item.",
-            "type": "string"
-        },
-        "Take": {
-            "id": "Take",
-            "title": "Take",
-            "description": "The take template string, which may contain placeholders.",
-            "type": "string"
-        }
-    }
+	"$schema": "https://json-schema.org/draft/2020-12/schema",
+	"title": "Hot Take Data",
+	"description": "The complete data structure containing all possible take items and templates for generating hot takes.",
+	"type": "object",
+	"properties": {
+		"people": {
+			"title": "People",
+			"description": "A list of influential people in the tech industry.",
+			"type": "array",
+			"items": {
+				"$ref": "#/$defs/TakeItem"
+			}
+		},
+		"companies": {
+			"title": "Companies",
+			"description": "A list of tech companies.",
+			"type": "array",
+			"items": {
+				"$ref": "#/$defs/TakeItem"
+			}
+		},
+		"languages": {
+			"title": "Programming Languages",
+			"description": "A list of programming languages.",
+			"type": "array",
+			"items": {
+				"$ref": "#/$defs/TakeItem"
+			}
+		},
+		"technologies": {
+			"title": "Technologies",
+			"description": "A list of technologies, frameworks, and technical concepts",
+			"type": "array",
+			"items": {
+				"$ref": "#/$defs/TakeItem"
+			}
+		},
+		"problems": {
+			"title": "Problems",
+			"description": "A list of common problems in software development.",
+			"type": "array",
+			"items": {
+				"type": "string"
+			}
+		},
+		"tlds": {
+			"title": "Top-Level Domains",
+			"description": "A list of top-level domains.",
+			"type": "array",
+			"items": {
+				"type": "string"
+			}
+		},
+		"takes": {
+			"title": "Takes",
+			"description": "A list of hot take templates.",
+			"type": "array",
+			"items": {
+				"title": "Take Definition",
+				"description": "A take definition which can be either a text template string or an object with a take and optional images.",
+				"anyOf": [
+					{
+						"$ref": "#/$defs/Take"
+					},
+					{
+						"title": "Take Definition Object",
+						"description": "An object that contains a take template string and an optional image or images.",
+						"type": "object",
+						"properties": {
+							"take": {
+								"$ref": "#/$defs/Take"
+							},
+							"image": {
+								"title": "Image or Images",
+								"description": "An optional image filename or an array of image filenames associated with this take.",
+								"anyOf": [
+									{
+										"$ref": "#/$defs/ImageFilename"
+									},
+									{
+										"maxItems": 4,
+										"type": "array",
+										"items": {
+											"$ref": "#/$defs/ImageFilename"
+										}
+									}
+								]
+							}
+						},
+						"required": ["take"],
+						"additionalProperties": false
+					}
+				]
+			}
+		}
+	},
+	"required": [
+		"people",
+		"companies",
+		"languages",
+		"technologies",
+		"problems",
+		"tlds",
+		"takes"
+	],
+	"additionalProperties": false,
+	"$defs": {
+		"TakeItem": {
+			"id": "TakeItem",
+			"title": "Take Item",
+			"description": "A take item which can be either a text value or an object with a value and an image.",
+			"anyOf": [
+				{
+					"$ref": "#/$defs/TakeItemValue"
+				},
+				{
+					"title": "Take Item Object",
+					"description": "An object that contains a text value and an image filename.",
+					"type": "object",
+					"properties": {
+						"value": {
+							"$ref": "#/$defs/TakeItemValue"
+						},
+						"image": {
+							"$ref": "#/$defs/ImageFilename"
+						}
+					},
+					"required": ["value", "image"],
+					"additionalProperties": false
+				}
+			]
+		},
+		"TakeItemValue": {
+			"id": "TakeItemValue",
+			"title": "Value",
+			"description": "The text value of the take item, which will be used when replacing placeholders.",
+			"type": "string"
+		},
+		"ImageFilename": {
+			"id": "ImageFilename",
+			"title": "Image Filename",
+			"description": "The filename of the image associated with this item.",
+			"type": "string"
+		},
+		"Take": {
+			"id": "Take",
+			"title": "Take",
+			"description": "The take template string, which may contain placeholders.",
+			"type": "string"
+		}
+	}
 }
