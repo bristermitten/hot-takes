@@ -2,9 +2,9 @@ import { randomInt } from "node:crypto";
 import { readFileSync } from "node:fs";
 import "./util";
 import { basename } from "node:path";
+import JSON5 from "json5";
 import { z } from "zod";
 import { expectArrayOfMaxLen4 } from "./util";
-import JSON5 from 'json5'
 
 const takeItemValueSchema = z.string().meta({
 	id: "TakeItemValue",
@@ -197,9 +197,18 @@ function takeDefinitionImages(thing: TakeDefinition): string[] {
 /**
  * The hot take data loaded from hotTakeData.json.
  */
-const hotTakeData: HotTakeData = HotTakeDataSchema.parse(
+let hotTakeData: HotTakeData = HotTakeDataSchema.parse(
 	JSON5.parse(readFileSync(`${process.cwd()}/hotTakeData.json5`).toString()),
 );
+
+/**
+ * @internal Used for testing purposes only.
+ * Injects mock data to bypass file reading in tests.
+ * @param data The mock {@link HotTakeData} to use.
+ */
+export function __setHotTakeData(data: HotTakeData) {
+	hotTakeData = data;
+}
 
 type PlaceholderFunction = (users: string[]) => TakeItem[];
 
