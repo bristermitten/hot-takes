@@ -1,6 +1,6 @@
 import fs from "node:fs";
 import { fileTypeFromBuffer } from "file-type";
-import { twitterAPI } from "./bot.js";
+import { twitterAPI } from "./twitter.js";
 
 const detectFileType = async (
 	contents: Buffer,
