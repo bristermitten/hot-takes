@@ -15,7 +15,7 @@ export const twitterAPI = new TwitterApi({
 const postHotTake = async () => {
 	const { take, images } = await generateHotTake();
 	console.log(`Posting hot take: ${take} with images ${images}`);
-	const mediaIDs = await Promise.all(images.map(getMediaId));
+	const mediaIDs = images ? await Promise.all(images.map(getMediaId)) : [];
 	console.log(`Media IDs: ${mediaIDs}`);
 
 	const mediaObj =

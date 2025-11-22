@@ -28,15 +28,17 @@
 		"@types/levenshtein": "^1.0.4",
 		"@types/node": "^24.10.1",
 		"@types/string-similarity": "^4.0.2",
+		"bun-types": "^1.3.3",
 		"typescript": "^5.9.3"
 	},
 	"dependencies": {
 		"expiry-map": "^2.0.0",
 		"express": "^5.1.0",
-		"levenshtein": "^1.0.5",
 		"file-type": "^19.0.0",
+		"levenshtein": "^1.0.5",
 		"string-similarity": "^4.0.4",
 		"twitter-api-sdk": "^1.2.1",
-		"twitter-api-v2": "^1.28.0"
+		"twitter-api-v2": "^1.28.0",
+		"zod": "^4.1.12"
 	}
 }
