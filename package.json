@@ -4,8 +4,7 @@
 	"description": "A Twitter bot that posts hot takes.",
 	"main": "src/bot.ts",
 	"type": "module",
-	"module": "src/bot.ts",
-	"types": "src/bot.ts",
+	"module": "src/hotTakes.ts",
 	"bin": {
 		"hot-takes": "src/bot.ts"
 	},
