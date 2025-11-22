@@ -1,3 +1,3 @@
-export * from "./hotTakes";
-export * from "./mediaUploads";
-export * from "./util";
+export * from "./hotTakes.js";
+export * from "./mediaUploads.js";
+export * from "./util.js";
