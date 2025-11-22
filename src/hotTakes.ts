@@ -312,7 +312,7 @@ const placeholderPattern = /{([\w|]+)}/g;
  * @param users  an optional array of user-provided strings to include in the take generation
  * @returns  a Promise that resolves to a HotTakeResponse containing the generated take and associated images
  */
-export default async function generateHotTake(
+export async function generateHotTake(
 	users: string[] = [],
 ): Promise<HotTakeResponse> {
 	const images: string[] = [];
