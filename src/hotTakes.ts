@@ -198,7 +198,9 @@ export function takeDefinitionImages(thing: TakeDefinition): string[] {
  * The hot take data loaded from hotTakeData.json.
  */
 let hotTakeData: HotTakeData = HotTakeDataSchema.parse(
-	JSON5.parse(readFileSync(`${process.cwd()}/hotTakeData.json5`).toString()),
+	JSON5.parse(
+		readFileSync(new URL("../hotTakeData.json5", import.meta.url)).toString(),
+	),
 );
 
 /**
