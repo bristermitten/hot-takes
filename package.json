@@ -1,6 +1,6 @@
 {
 	"name": "hot-takes",
-	"version": "1.2.1",
+	"version": "1.2.2",
 	"description": "A Twitter bot that posts hot takes.",
 	"main": "src/bot.ts",
 	"type": "module",
