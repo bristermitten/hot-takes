@@ -1,9 +1,10 @@
 import { afterEach, beforeEach, describe, expect, it } from "bun:test";
 import type { z } from "zod";
-import generateHotTake, {
+import {
 	__setHotTakeData,
+	generateHotTake,
 	type HotTakeDataSchema,
-} from "./hotTakes";
+} from "./hotTakes.js";
 
 // Create a valid, empty mock data object to reset state
 const emptyMockData: z.infer<typeof HotTakeDataSchema> = {

@@ -1,10 +1,10 @@
 import { randomInt } from "node:crypto";
 import { readFileSync } from "node:fs";
-import "./util";
+
 import { basename } from "node:path";
 import JSON5 from "json5";
 import { z } from "zod";
-import { expectArrayOfMaxLen4 } from "./util";
+import { expectArrayOfMaxLen4 } from "./util.js";
 
 const takeItemValueSchema = z.string().meta({
 	id: "TakeItemValue",

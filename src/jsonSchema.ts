@@ -1,6 +1,6 @@
 import fs from "node:fs";
 import { z } from "zod";
-import { HotTakeDataSchema } from "./hotTakes";
+import { HotTakeDataSchema } from "./hotTakes.js";
 
 function writeJsonSchema() {
 	const schema = z.toJSONSchema(HotTakeDataSchema, {

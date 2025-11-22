@@ -1,9 +1,9 @@
 #!/usr/bin/env bun
 import { TwitterApi } from "twitter-api-v2";
-import config from "./config";
-import generateHotTake from "./hotTakes";
-import { getMediaId } from "./mediaUploads";
-import { expectArrayOfMaxLen4 } from "./util";
+import config from "./config.js";
+import { generateHotTake } from "./hotTakes.js";
+import { getMediaId } from "./mediaUploads.js";
+import { expectArrayOfMaxLen4 } from "./util.js";
 
 export const twitterAPI = new TwitterApi({
 	appKey: config.consumerKey,
