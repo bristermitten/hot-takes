@@ -1230,6 +1230,7 @@
 		"Hot take: {technology} is not 'AI'. It's just a glorified autocomplete.",
 		"Just watched {technology} have a full conversation with itself to solve {problem}. This is the future.",
 		"Anyone still writing {language} by hand is living in the past. My {technology} agent does it all for me.",
-		"I'm pretty sure {technology} will achieve AGI within the next year."
+		"I'm pretty sure {technology} will achieve AGI within the next year.",
+		"Personally, I wrote my own AGI. I use it to write all my {language} projects."
 	],
 }
