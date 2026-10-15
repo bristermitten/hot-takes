@@ -278,8 +278,9 @@ function isValidPlaceholder(value: string): value is Placeholder {
 function combinePlaceholderSources(
 	...source: Exclude<keyof HotTakeData, "takes">[]
 ): PlaceholderFunction {
-	if (source.length === 0) return () => [];
-	const head: TakeItem[] = hotTakeData[source[0]];
+	const [first, ...rest] = source;
+	if (first === undefined) return () => [];
+	const head: TakeItem[] = hotTakeData[first];
 	const tail = source.slice(1).flatMap((it) => hotTakeData[it]);
 	return (users: string[]) => head.concat(tail, users);
 }
